@@ -5,8 +5,6 @@ const pokemonName = document.getElementById('pokemon-name');
 const pokemonId = document.getElementById('pokemon-id');
 const pokemonWeight = document.getElementById('weight');
 const pokemonHeight = document.getElementById('height');
-const type1 = document.getElementById('type-1');
-const type2 = document.getElementById('type-2');
 const hp = document.getElementById('hp');
 const attack = document.getElementById('attack');
 const defense = document.getElementById('defense');
@@ -53,13 +51,19 @@ const fetchData = async (nameOrId) => {
 
 const updateDisplay = (data) => {
     const { name, id, height, weight, sprites, stats, types } = data;
+    const pokemonTypes = document.getElementById('types');
+    pokemonTypes.innerHTML = ``;
+    const type1 = document.getElementById('type-1');
+    const type2 = document.getElementById('type-2');
     const newImageElement = document.createElement('img');
     const lastImg = pokemonImageContainer.lastElementChild;
+    
     if (lastImg.tagName === 'IMG') {
         lastImg.remove();
     }
     newImageElement.setAttribute('src', sprites["front_default"]);
     newImageElement.setAttribute('class', 'pokemon-sprite');
+    newImageElement.setAttribute('id', 'sprite');
     pokemonImageContainer.appendChild(newImageElement);
 
     pokemonName.textContent = name.toUpperCase();
@@ -68,13 +72,19 @@ const updateDisplay = (data) => {
     pokemonHeight.textContent = 'Height: ' + height;
 
     if (types[0]) {
-        type1.textContent = types[0]['type']['name'].toUpperCase();
-        type1.setAttribute('style', `background-color: ${colours[types[0]['type']['name']]}`);
+        pokemonTypes.innerHTML += `<span 
+        class="pokemon-type" 
+        id="type-1" 
+        style="background-color: ${colours[types[0]['type']['name']]}; padding: 4px; margin: 0 3px;">${types[0]['type']['name'].toUpperCase()}</span>`;
     }
 
     if (types[1]) {
-        type2.textContent = types[1]['type']['name'].toUpperCase();
-        type2.setAttribute('style', `background-color: ${colours[types[1]['type']['name']]}`);
+        
+        pokemonTypes.innerHTML += `<span 
+        class="pokemon-type" 
+        id="type-2" 
+        style="background-color: ${colours[types[1]['type']['name']]}; padding: 4px; margin: 0 3px;">${types[1]['type']['name'].toUpperCase()}</span>`;
+
     }
     
     hp.textContent = stats[0]["base_stat"];
