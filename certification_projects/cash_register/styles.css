@@ -1,0 +1,105 @@
+:root {
+    --base: #222831;
+    --main: #393E46;
+    --highlight: #00ADB5;
+    --text: #EEEEEE;
+}
+
+body {
+    background-color: var(--base);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    width: 800px;
+    height: 90vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+#title {
+    font-size: 2.5em;
+}
+
+.status-container {
+    height: 25%;
+    margin: 0 20px;
+}
+
+#change-due {
+    border: 1px solid white;
+    font-size: 0.75em;
+    width: 50%;
+    margin: 0 auto;
+    background-color: var(--main);
+    border-radius: 20px;
+}
+
+.customer-input {
+    height: 20%;
+    margin-top: 10px;
+}
+
+.customer-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25em;
+}
+
+.purchase-button {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 14px 24px 16px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    transition: transform 200ms,background 200ms;
+    background: transparent;
+    color: var(--highlight);
+    box-shadow: 0 0 0 3px var(--highlight) inset;
+    width: 200px;
+    margin: 20px;
+}
+
+.user-input {
+    width: 200px;
+    font-size: 18px;
+}
+.purchase-button:hover {
+    transform: translateY(-2px);
+    background-color: var(--text);
+    color: var(--base);
+    box-shadow: 0 0 0 3px var(--main) inset;
+}
+
+.total-price {
+    border: 1px solid var(--highlight);
+    border-radius: 10px;
+    width: 20%;
+    color: var(--highlight);
+    margin: 20px auto;
+}
+
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;;
+    font-size: 1.25em;
+    margin-top: 30px;
+}
+
+#cid-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+

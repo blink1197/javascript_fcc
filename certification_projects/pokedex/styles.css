@@ -1,0 +1,143 @@
+:root {
+    --base: #222831;
+    --main: #393E46;
+    --highlight: #00ADB5;
+    --text: #EEEEEE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--base);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+}
+
+main {
+    background-image: url('/img/pokedex-nobg.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    max-width: 800px; /* Optionally limit the width for better readability */
+    min-width: 800px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.image-container {
+    border: 2px solid blue;
+    width: 245px;
+    height: 162px;
+    position: relative;
+    top: 178px;
+    left: 105px;
+}
+
+.type-container {
+    border: 2px solid blue;
+    width: 150px;
+    height: 32px;
+    position: relative;
+    top: 178px;
+    left: 200px;
+}
+
+.stats-container {
+    width: 275px;
+    height: 222px;
+    position: relative;
+    top: -16px;
+    left: 448px;
+}
+
+.red {
+    width: 275px;
+    height: 56px;
+    background-color: #FB0605;
+    position: relative;
+    top: 48px;
+    left: 447px;
+}
+
+.input-section {
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+}
+
+#search-input {
+    margin-top: 10px;
+    height: 30px;
+    font-size: 20px;
+}
+
+#search-button {
+    font-size: 20px;
+    width: 90px;
+    height: 30px;
+    color: var(--text);
+    background-color: #FB0605;
+    border: none; 
+    cursor: pointer;
+}
+
+table {
+    border: 4px solid black;
+}
+
+td {
+    width: 132px;
+    height: 29px;
+    color: var(--base);
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.image-container div {
+    text-align: left;
+    padding-top: 5px;
+}
+
+.pokemon-details {
+    color: var(--base);
+    font-weight: bold;
+    margin: 0 8px;
+}
+
+.subdetails {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.pokemon-sprite {
+    height: 110px;
+    margin-top: 0px;
+}
+
+#types {
+    padding: 3px;
+}
+
+.pokemon-type {
+    font-weight: normal;
+    font-size: 11px;
+    color: var(--base);
+    padding: 4px;
+    border-radius: 3px;
+}
+
+
+
+
